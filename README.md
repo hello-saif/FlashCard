@@ -14,3 +14,5 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+![FlashCard](https://github.com/hello-saif/FlashCard/assets/101374729/45b05380-b3fd-4887-994e-a5acc0f3245f)
+
