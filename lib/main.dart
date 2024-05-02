@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
-import 'Add_FlashCard.dart';
 import 'FlashCardScreen.dart';
 
 void main() {
-  runApp(FlashcardApp());
+  runApp(const FlashcardApp());
 }
 
 class FlashcardApp extends StatelessWidget {
+  const FlashcardApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,3 +20,5 @@ class FlashcardApp extends StatelessWidget {
     );
   }
 }
+
+

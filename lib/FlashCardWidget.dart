@@ -1,12 +1,14 @@
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'FlashCardScreen.dart';
+import 'Add_FlashCard.dart';
 
 class FlashcardWidget extends StatefulWidget {
   final Flashcard flashcard;
+  final Function(bool) onAnswered;
 
-  const FlashcardWidget({Key? key, required this.flashcard}) : super(key: key);
+  const FlashcardWidget({Key? key, required this.flashcard, required this.onAnswered}) : super(key: key);
 
   @override
   _FlashcardWidgetState createState() => _FlashcardWidgetState();
@@ -43,6 +45,19 @@ class _FlashcardWidgetState extends State<FlashcardWidget> {
                 ),
                 const SizedBox(height: 8.0),
                 Text(widget.flashcard.answer),
+                const SizedBox(height: 16.0),
+                ElevatedButton(
+                  onPressed: () {
+                    widget.onAnswered(true);
+                  },
+                  child: const Text('Correct'),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    widget.onAnswered(false);
+                  },
+                  child: const Text('Incorrect'),
+                ),
               ],
             ],
           ),
