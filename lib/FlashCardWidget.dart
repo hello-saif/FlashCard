@@ -48,13 +48,13 @@ class _FlashcardWidgetState extends State<FlashcardWidget> {
                 const SizedBox(height: 16.0),
                 ElevatedButton(
                   onPressed: () {
-                    widget.onAnswered(true);
+                    widget.onAnswered(widget.flashcard.isCorrect);
                   },
                   child: const Text('Correct'),
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    widget.onAnswered(false);
+                    widget.onAnswered(!widget.flashcard.isCorrect);
                   },
                   child: const Text('Incorrect'),
                 ),

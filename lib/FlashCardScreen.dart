@@ -11,26 +11,16 @@ class FlashcardScreen extends StatefulWidget {
 
 class _FlashcardScreenState extends State<FlashcardScreen> {
   List<Flashcard> flashcards = [
-    Flashcard(question: 'What is the capital of France?', answer: 'Paris'),
-    Flashcard(
-        question: 'What is the largest planet in our solar system?',
-        answer: 'Jupiter'),
-    Flashcard(
-        question: 'Who wrote "Romeo and Juliet"?',
-        answer: 'William Shakespeare'),
-    Flashcard(
-        question: 'What is the powerhouse of the cell?',
-        answer: 'Mitochondria'),
-    Flashcard(
-        question: 'Who painted the Mona Lisa?', answer: 'Leonardo da Vinci'),
-    Flashcard(
-        question: 'What is the chemical symbol for water?', answer: 'H2O'),
-    Flashcard(
-        question: 'Who invented the light bulb?', answer: 'Thomas Edison'),
-    Flashcard(question: 'What is the tallest mammal?', answer: 'Giraffe'),
-    Flashcard(
-        question: 'Which planet is known as the Red Planet?', answer: 'Mars'),
-    Flashcard(question: 'What is the chemical symbol for gold?', answer: 'Au'),
+    Flashcard(question: 'What is the capital of France?', answer: 'Dhaka', isCorrect: false),
+    Flashcard(question: 'What is the largest planet in our solar system?', answer: 'Jupiter', isCorrect: true),
+    Flashcard(question: 'Who wrote "Romeo and Juliet"?', answer: 'William Shakespeare', isCorrect: true),
+    Flashcard(question: 'What is the powerhouse of the cell?', answer: 'Mitochondria', isCorrect: true),
+    Flashcard(question: 'Who painted the Mona Lisa?', answer: 'Leonardo da Vinci', isCorrect: true),
+    Flashcard(question: 'What is the chemical symbol for water?', answer: 'H2O', isCorrect: true),
+    Flashcard(question: 'Who invented the light bulb?', answer: 'Thomas Edison', isCorrect: true),
+    Flashcard(question: 'What is the tallest mammal?', answer: 'Giraffe', isCorrect: true),
+    Flashcard(question: 'Which planet is known as the Red Planet?', answer: 'Mars', isCorrect: true),
+    Flashcard(question: 'What is the chemical symbol for gold?', answer: 'Au', isCorrect: true),
   ];
 
   int correctAnswers = 0;

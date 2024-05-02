@@ -9,6 +9,7 @@ class AddFlashcardScreen extends StatefulWidget {
 class _AddFlashcardScreenState extends State<AddFlashcardScreen> {
   TextEditingController questionController = TextEditingController();
   TextEditingController answerController = TextEditingController();
+  bool isCorrect = true; // Default is correct
 
   @override
   Widget build(BuildContext context) {
@@ -30,6 +31,20 @@ class _AddFlashcardScreenState extends State<AddFlashcardScreen> {
               decoration: const InputDecoration(labelText: 'Answer'),
             ),
             const SizedBox(height: 16.0),
+            Row(
+              children: [
+                const Text('Is Correct: '),
+                Checkbox(
+                  value: isCorrect,
+                  onChanged: (value) {
+                    setState(() {
+                      isCorrect = value ?? false;
+                    });
+                  },
+                ),
+              ],
+            ),
+            const SizedBox(height: 16.0),
             ElevatedButton(
               onPressed: () {
                 if (questionController.text.isNotEmpty &&
@@ -39,6 +54,7 @@ class _AddFlashcardScreenState extends State<AddFlashcardScreen> {
                     Flashcard(
                       question: questionController.text,
                       answer: answerController.text,
+                      isCorrect: isCorrect,
                     ),
                   );
                 } else {
@@ -69,6 +85,7 @@ class _AddFlashcardScreenState extends State<AddFlashcardScreen> {
 class Flashcard {
   final String question;
   final String answer;
+  final bool isCorrect;
 
-  Flashcard({required this.question, required this.answer});
+  Flashcard({required this.question, required this.answer, required this.isCorrect});
 }
