@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'Add_FlashCard.dart';
+import 'data/Add_FlashCard.dart';
 import 'FlashCardWidget.dart';
 
 class FlashcardScreen extends StatefulWidget {
